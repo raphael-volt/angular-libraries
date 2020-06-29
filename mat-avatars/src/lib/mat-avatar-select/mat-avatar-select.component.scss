@@ -1,0 +1,18 @@
+$e-margin: 4px;
+.avatar-nav.avatar-nav {
+    .mat-tab-link.avatar-tab-link {
+        order      : 0;
+        flex       : 0 1 auto;
+        align-self : auto;
+        opacity    : 1 !important;
+        display    : inline-block;
+        min-height : 0 !important;
+        padding    : $e-margin 0 !important;
+        margin     : $e-margin;
+        min-width  : 0 !important;
+        box-sizing : content-box;
+        &.refresh-btn {
+            display: flex;
+        }
+    }
+}

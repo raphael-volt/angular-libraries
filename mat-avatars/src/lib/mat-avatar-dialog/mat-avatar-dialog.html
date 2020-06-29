@@ -1,0 +1,17 @@
+<!-- 
+<h2 class="fx0" mat-dialog-title>Choisir un avatar</h2>
+<mat-dialog-content class="fx1 fx-col">
+  <div avtMatAvatarSelect class="fx1" (avatarChange)="avatarChange($event)"></div>
+</mat-dialog-content>
+<mat-dialog-actions class="fx0">
+  <button mat-raised-button color="accent" [disabled]="!selected" [mat-dialog-close]="selected">OK</button>
+  <button mat-raised-button color="primary" mat-dialog-close>Annuler</button>
+</mat-dialog-actions> 
+-->
+<div class="fx1 fx-col">
+  <div avtMatAvatarSelect class="fx1" (avatarChange)="avatarChange($event)"></div>
+  <div class="fx0 button-bar">
+    <button mat-raised-button color="accent" [disabled]="!selected" [mat-dialog-close]="selected">OK</button>
+    <button mat-raised-button color="primary" mat-dialog-close>Annuler</button>
+  </div> 
+</div>

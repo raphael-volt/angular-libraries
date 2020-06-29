@@ -1,0 +1,12 @@
+<mat-dialog-content>
+    <div [formGroup]="form" class="resize-form">
+        <mat-form-field>
+            <mat-label>largeur</mat-label>
+            <input autocomplete="off" size="4" maxlength="4" type="number" matInput formControlName="width">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>hauteur</mat-label>
+            <input autocomplete="off" type="number" matInput formControlName="height">
+        </mat-form-field>
+    </div>
+</mat-dialog-content>

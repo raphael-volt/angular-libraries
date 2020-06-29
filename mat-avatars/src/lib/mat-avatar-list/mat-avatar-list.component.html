@@ -1,0 +1,3 @@
+<img *ngFor="let a of avatars | async" (click)="setSelected(a)"
+    matAvatar [avatarCircle]="true" [avatarBorder]="true"  [avatarSrc]="a.src" [avatarSize]="avatarSize"
+    avatarImg>

@@ -1,0 +1,11 @@
+:host {
+    overflow: hidden;
+    box-sizing: border-box;
+    .mat-dialog-content {
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .mat-dialog-actions {
+        box-sizing: border-box;
+    }
+}

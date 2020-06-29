@@ -1,0 +1,9 @@
+<div #main>
+    <emoji-picker 
+        [backgroundImageFn]="backgroundImageFn" [sheetSize]="sheetSize"
+        [exclude]="['recent']" [showPreview]="false"
+        [enableSearch]="false" [showSingleCategory]="true" 
+        (sizeChange)="sizeChange.emit($event)"
+        (emojiClick)="emojiClickHandler($event)" [i18n]="in18n">
+    </emoji-picker>
+</div>

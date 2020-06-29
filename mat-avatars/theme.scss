@@ -1,0 +1,44 @@
+@mixin avatar-theme($border-color, $selected-border-color, $background-transition-duration:320ms) {
+    .mat-avatar {
+        display: inline-block;
+    }
+    .avatar-circle {
+        background-size: cover;
+        border-radius  : 50%;
+        border: none;
+        &.border {
+            border: 1px solid $border-color;
+        }
+    }
+    .mat-avatar-list > img {
+        $bg-transition: background-color $background-transition-duration ease;
+        $bdr-transition: border-color $background-transition-duration ease;
+        position: absolute; 
+        left: 0;
+        right: 0;
+        padding       : 0;
+        margin        : 0;
+        user-select   : none;
+        cursor        : pointer;
+        outline-style : none;
+        background-color: rgba($color: #000000, $alpha: 0);
+        transition: $bg-transition, $bdr-transition;
+        &:hover {
+            background-color: rgba($color: #000000, $alpha: 0.08);
+            transition: $bg-transition;
+        }
+        &.selected {
+            border-color: $selected-border-color;
+            background-color: rgba($color: #000000, $alpha: 0.16);
+            transition: $bg-transition, $bdr-transition;
+        }
+        &.selected:hover {
+            background-color: rgba($color: #000000, $alpha: 0.22);
+            transition: $bg-transition;
+        }
+    
+        &.disabled {
+            pointer-events: none;
+        }
+    }
+}

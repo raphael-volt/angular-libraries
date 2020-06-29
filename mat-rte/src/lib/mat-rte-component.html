@@ -1,0 +1,38 @@
+<div #toolbar class="toolbar">
+    <span class="ql-formats">
+        <button class="ql-header" value="1"></button>
+        <button class="ql-header" value="2"></button>
+        <select class="ql-size">
+            <option selected>normal</option>
+            <option *ngFor="let s of sizes" [value]="s.size">{{s.name}}</option>
+        </select>
+        <select class="ql-color"></select>
+    </span>
+    <span class="ql-formats">
+        <button class="ql-bold"></button>
+        <button class="ql-italic"></button>
+        <button class="ql-underline"></button>
+        <button class="ql-strike"></button>
+        <button class="ql-clean"></button>
+    </span>
+    <span class="ql-formats">
+        <button class="ql-list" value="ordered"></button>
+        <button class="ql-list" value="bullet"></button>
+        <button class="ql-indent" value="-1"></button>
+        <button class="ql-indent" value="+1"></button>
+        <select class="ql-align"></select>
+    </span>
+    <span class="ql-formats">
+      <button class="ql-link"></button>
+      <button class="ql-image"></button>
+      <button class="ql-rteemoji fix-hidden">
+            <svg viewbox="0 0 18 18">
+                <circle class="ql-fill" cx="7" cy="7" r="1"></circle>
+                <circle class="ql-fill" cx="11" cy="7" r="1"></circle>
+                <path class="ql-stroke" d="M7,10a2,2,0,0,0,4,0H7Z"></path>
+                <circle class="ql-stroke" cx="9" cy="9" r="6"></circle>
+            </svg>
+        </button>
+    </span>
+</div>
+<div #editor class="editor"></div>

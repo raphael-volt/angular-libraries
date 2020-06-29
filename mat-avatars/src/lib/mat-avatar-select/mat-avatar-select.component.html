@@ -1,0 +1,18 @@
+<nav class="avatar-nav fx0" mat-tab-nav-bar [backgroundColor]="">
+    <a class="avatar-tab-link" mat-tab-link *ngFor="let a of collection" (click)="setSelected(a)"
+        [active]="selected == a">
+        <!-- <span class="emoji">{{a.emoji}}</span> -->
+        <img [matAvatar]="a.emoji" [avatarSize]="48" [avatarType]="a.type"/>
+    </a>
+    <a class="mat-icon mat-primary avatar-tab-link refresh-btn" 
+        mat-tab-link #btn (click)="avtList.refresh()">
+        <svg class="mat-elevation-z2" style="border-radius: 50%;" [refreshList]="btn" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 768 768">
+            <path fill="currentColor"
+                d="M614.761 384q0-95.549-67.606-163.155t-163.155-67.606v-115.38l-153.239 153.239 153.239 155.042v-115.38q63.098 0 108.169 45.070t45.070 108.169-45.070 108.169-108.169 45.071-108.169-45.071-45.070-108.169h-77.522q0 95.549 67.606 163.155t163.155 67.606 163.155-67.606 67.606-163.155zM384 0q158.648 0 271.324 112.676t112.676 271.324-112.676 271.324-271.324 112.676-271.324-112.676-112.676-271.324 112.676-271.324 271.324-112.676z">
+            </path>
+        </svg>
+    </a>
+</nav>
+<div #avtList avtMatAvatarList class="fx1" [avatarType]="selected.type" (avatarChange)="avatarChange.next($event)">
+</div>

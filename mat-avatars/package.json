@@ -1,0 +1,20 @@
+{
+  "name": "mat-avatars",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^9.1.11",
+    "@angular/core": "^9.1.11",
+    "@angular/material": "^9.2.4",
+    "@dicebear/avatars": "^4.2.0",
+    "@dicebear/avatars-avataaars-sprites": "^4.2.0",
+    "@dicebear/avatars-bottts-sprites": "^4.2.0",
+    "@dicebear/avatars-female-sprites": "^4.2.0",
+    "@dicebear/avatars-gridy-sprites": "^4.2.0",
+    "@dicebear/avatars-jdenticon-sprites": "^4.2.0",
+    "@dicebear/avatars-male-sprites": "^4.2.0",
+    "rxjs": "~6.5.4"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
+  }
+}

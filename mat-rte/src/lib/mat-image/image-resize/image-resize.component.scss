@@ -1,0 +1,18 @@
+
+.resize-form {
+    padding: 0px;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    > * {
+        min-width: 0px;
+        width: 4em;
+        order: 0;
+        flex: 0 0 auto;
+        align-self: auto;
+    }
+}

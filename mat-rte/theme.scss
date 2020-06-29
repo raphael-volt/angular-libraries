@@ -1,0 +1,116 @@
+@mixin emoji-theme($sheet-size) {
+
+    .rte-mart-emoji,
+    .ql-container .rte-mart-emoji {
+
+        overflow   : hidden;
+        user-select: all;
+
+        &::selection {
+            color: rgba(0, 0, 0, 0);
+        }
+
+        &::-moz-selection {
+            color: rgba(0, 0, 0, 0);
+        }
+
+        min-width       : 14px;
+        min-height      : 14px;
+        max-width       : 64px;
+        max-height      : 64px;
+        display         : inline-block;
+        background-image: url('assets/emoji-apple-#{$sheet-size}.png');
+        background-size : 5700% 5700%;
+        color           : rgba(0, 0, 0, 0);
+        $em             : 1.2em;
+        width           : $em;
+        height          : $em;
+        line-height     : 1.42;
+        vertical-align  : text-top;
+        letter-spacing  : 1em;
+    }
+
+    .rte-mart-emoji.mart-emoji {
+        vertical-align: text-bottom;
+    }
+}
+
+@mixin mat-rte-theme($font-family, $sheet-size) {
+    
+    .rte-view.ql-container,
+    .editor.ql-container.ql-snow,
+    .toolbar.ql-toolbar.ql-snow {
+        font-family: $font-family;
+    }
+
+    
+    .rte-view.ql-container,
+    .editor.ql-container.ql-snow {
+        font-size: 14px;
+    }
+
+    .ql-container {
+        *::selection {
+            color           : white;
+            background-color: rgba(0, 0, 0, 0.20);
+        }
+
+    }
+
+    .ql-container.rte-view {
+        border: 0;
+
+        .ql-editor {
+            margin : 0;
+            padding: 0;
+        }
+    }
+
+    .ql-snow .ql-tooltip[data-mode=link]::before {
+        content: "Lien:";
+    }
+
+    .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+        content: 'OK';
+    }
+
+    .ql-snow .ql-tooltip::before {
+        content: "Tester:";
+    }
+
+    .ql-snow .ql-tooltip a.ql-action::after {
+        content: 'Modifier';
+    }
+
+    .ql-snow .ql-tooltip a.ql-remove::before {
+        content: 'Supprimer';
+    }
+
+    .fix-hidden {
+        overflow: hidden;
+    }
+
+    .mat-rte {
+        display        : flex;
+        flex-direction : column;
+        flex-wrap      : nowrap;
+        justify-content: flex-start;
+        align-content  : flex-start;
+        align-items    : stretch;
+        overflow       : hidden;
+
+        .toolbar {
+            order     : 0;
+            flex      : 0 1 auto;
+            align-self: auto;
+        }
+
+        .editor {
+            order     : 1;
+            flex      : 0 1 auto;
+            align-self: auto;
+            overflow  : hidden;
+        }
+    }
+    @include emoji-theme($sheet-size);
+}
